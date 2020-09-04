@@ -1,4 +1,9 @@
+#include "board.h"
+#include <stdio.h>
 int main()
 {
-	return 0;
+	board firstPlayersBoard = createBoard();
+	//printBoard(firstPlayersBoard);
+	initRandBoard(&firstPlayersBoard);
+	printBoard(firstPlayersBoard);
 }
