@@ -2,8 +2,10 @@
 #include <stdio.h>
 int main()
 {
-	board newBoard;
-	createBoard(&newBoard);
-	initRandBoard(&newBoard);
-	printBoard(&newBoard);
+	board_t* newBoard = createBoard();
+	printBoard(newBoard);
+	initRandBoard(newBoard);
+	printBoard(newBoard);
+	destroyBoard(&newBoard);
+	printf("%p\n", newBoard);
 }
