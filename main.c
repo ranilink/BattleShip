@@ -2,8 +2,8 @@
 #include <stdio.h>
 int main()
 {
-	board firstPlayersBoard = createBoard();
-	//printBoard(firstPlayersBoard);
-	initRandBoard(&firstPlayersBoard);
-	printBoard(firstPlayersBoard);
+	board newBoard;
+	createBoard(&newBoard);
+	initRandBoard(&newBoard);
+	printBoard(&newBoard);
 }

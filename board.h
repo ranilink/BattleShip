@@ -1,5 +1,12 @@
 typedef enum
 {
+	SUCCESS,
+	INVALID_INPUT,
+	ALLOCATION_FAIL
+} Err;
+
+typedef enum
+{
 	emptyCell,
 	shipCell,
 	shipPerimeterCell
@@ -13,13 +20,13 @@ typedef struct
 } board;
 
 /*Debugging tools*/
-void printBoard(board playersBoard);
+void printBoard(board* playersBoard);
 /******************/
 
-board createBoard();
+Err createBoard(board* newBoard);
 
-void initRandBoard(board* playerBoard);
+Err initRandBoard(board* newBoard);
 
-void initRandShip(board* playersBoard, unsigned char shipSize);
+Err initRandShip(board* newBoard, unsigned char shipSize);
 
-void addShipPerimeter(board* playersBoard, unsigned char row, unsigned char col);
+Err addShipPerimeter(board* newBoard, unsigned char row, unsigned char col);
